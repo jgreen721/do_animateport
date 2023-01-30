@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Lato:wght@100;300;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --mainfont: "Lato", sans-serif;
+  --black: black;
+  --white: white;
+  --mintgreen: rgb(27, 236, 201);
+}
+
+.app {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--mainfont);
+}
+
+.app-body {
+  padding: 1rem 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/*Navbar */
+
+nav,
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.nav-name {
+  letter-spacing: 0.5px;
+  font-size: 2rem;
+}
+
+.nav-links {
+  width: 15rem;
+  overflow: hidden;
+  /* border: 2px dotted white; */
+}
+
+/*Hero*/
+
+.hero {
+  /* display: flex; */
+  position: relative;
+  background: black;
+  height: 40rem;
+}
+
+.circle-hero {
+  position: absolute;
+  bottom: 5rem;
+  right: 20rem;
+  z-index: 5;
+}
+
+.hero-content {
+  position: absolute;
+  z-index: 5;
+  width: 43rem;
+  /* border: 2px dotted white; */
+  overflow: hidden;
+}
+
+.hero-h1 {
+  font-size: 5rem;
+  line-height: 3.5rem;
+  margin: 1rem 0;
+}
+
+.hero-blurb {
+  font-size: 1.3rem;
+  margin: 3rem 0;
+  line-height: 1.5rem;
+  font-weight: 100;
+}
+
+.mt-5 {
+  margin-top: 1.5rem;
+}
+
+.contact-btn {
+  background: transparent;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  border: none;
+  color: var(--white);
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+  font-weight: 100;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  border-bottom: 2px solid var(--mintgreen);
+}
+
+.contact-btn:hover {
+  background: linear-gradient(black, rgb(56, 53, 53));
+}
+
+.hero-img {
+  width: 24rem;
+  position: absolute;
+  right: 0;
+}
+
+.hero-blurb {
+  width: 65%;
+}
+
+.green-svg {
+  position: absolute;
+  top: 10rem;
+  left: 8rem;
+}
+
+.skills-container {
+  position: relative;
+}
+
+.skills-list {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.rings-svg {
+  position: absolute;
+  right: -12rem;
+  top: 5rem;
+}
+
+.skill-card {
+  padding: 2rem;
+  /* border: 1px solid peachpuff; */
+  position: relative;
+}
+
+.skill-name {
+  margin: 1rem 0;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-icon {
+  font-size: 8rem;
+  opacity: 35%;
+  margin-top: 1rem;
+}
+
+.skill-name {
+  text-transform: uppercase;
+}
+
+.skills-header {
+  margin: 2rem 0;
+  letter-spacing: 0.5rem;
+  font-size: 5rem;
+  text-shadow: 2px 3px 20px white;
+  animation: glow 20s infinite;
+}
+
+@keyframes glow {
+  0%,
+  20%,
+  40%,
+  80% {
+    text-shadow: 2px 3px 10px white, 3px 7px 20px red, -2px -4px 30px yellow,
+      1px 1px 70px white;
+  }
+  10%,
+  31%,
+  50%,
+  61%,
+  85% {
+    text-shadow: 2px 0px 20px white, 3px 3px 40px yellow,
+      -2px -4px 5px limegreen, 1px 10px 100px white;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    height: 65rem;
+    position: relative;
+    text-align: Center;
+  }
+
+  .hero-img {
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .hero-img-tablet-wrap {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-content {
+    text-align: center;
+    top: 40rem;
+    width: 100%;
+  }
+
+  .hero-h1 {
+    font-size: 3rem;
+    width: auto;
+    line-height: 3rem;
+  }
+
+  .hero-blurb {
+    width: auto;
+    margin: 0 1rem;
+  }
+
+  .circle-hero {
+    top: 28rem;
+    left: 4rem;
+  }
+
+  .green-svg {
+    top: 48rem;
+  }
+
+  .skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .app-body {
+    padding: 0;
+  }
+  nav {
+    padding: 1rem;
+  }
+  .nav-links {
+    width: 10rem;
+  }
+
+  .skill-name {
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .skills-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .rings-svg {
+    top: 0rem;
+    left: 17rem;
+  }
+  .hero-h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-header {
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+  }
+}
